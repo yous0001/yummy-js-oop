@@ -1,7 +1,8 @@
 import { displayMeals } from "./ui.js"
-
+import { MealDetails} from "./details.js"
 
 let navIcon=document.getElementById("nav-icon")
+let items=[]
 let isNavOpen=false
 
 navIcon.addEventListener('click',function(){
@@ -73,7 +74,20 @@ async function getDefaultMeals(){
     const URL=`https://www.themealdb.com/api/json/v1/1/search.php?s=`
     let responce=await fetch(URL)
     responce=await responce.json()  
+
     displayMeals(responce.meals)   
+
+    items=Array.from(document.getElementsByClassName("item"))
+    items.forEach(async item=>{
+        item.addEventListener('click',async function(){
+            let mealdetails=new MealDetails(item.id)
+            
+        })
+    })
 }
 
 getDefaultMeals()
+
+
+
+

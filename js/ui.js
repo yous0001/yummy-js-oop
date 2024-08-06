@@ -5,7 +5,7 @@ export function displayMeals(meals){
     meals.forEach(meal => {
         cartona+=`
         <div class="col-lg-3 col-md-4">
-                <div class="item rounded-2 overflow-hidden position-relative">
+                <div class="item rounded-2 overflow-hidden position-relative" id="${meal.idMeal}">
                     <img src="${meal.strMealThumb}" class="w-100" >
                     <div class="img-layer position-absolute">
                         <p>${meal.strIngredient1}</p>
