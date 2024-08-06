@@ -1,3 +1,6 @@
+import { displayMeals } from "./ui.js"
+
+
 let navIcon=document.getElementById("nav-icon")
 let isNavOpen=false
 
@@ -69,8 +72,8 @@ function closeNav(){
 async function getDefaultMeals(){
     const URL=`https://www.themealdb.com/api/json/v1/1/search.php?s=`
     let responce=await fetch(URL)
-    responce=await responce.json()
-    return responce
-    
+    responce=await responce.json()  
+    displayMeals(responce.meals)   
 }
-let meals=getDefaultMeals()
+
+getDefaultMeals()
