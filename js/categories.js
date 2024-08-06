@@ -1,3 +1,5 @@
+import { displayCategories } from "./ui.js"
+
 export class Categories{
     constructor(){
         this.getCategories()
@@ -7,7 +9,7 @@ export class Categories{
         let responce=await fetch(URL)
         responce=await responce.json()
         let categories=responce.categories
-        
+        displayCategories(categories)
         
     }
 }

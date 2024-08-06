@@ -7,7 +7,7 @@ export function displayMeals(meals){
                 <div class="item rounded-2 overflow-hidden position-relative" id="${meal.idMeal}">
                     <img src="${meal.strMealThumb}" class="w-100" >
                     <div class="img-layer position-absolute">
-                        <p>${meal.strMeal}</p>
+                        <h3>${meal.strMeal}</h3>
                     </div>
                 </div>
             </div>
@@ -15,6 +15,7 @@ export function displayMeals(meals){
     });
     document.getElementById("row").innerHTML=cartona
 }
+
 
 export function displayMealDetials(meal){
     let Ingredient=[]
@@ -76,4 +77,23 @@ export function displayMealDetials(meal){
                 <a target="_blank" href="${meal.strYoutube}" class="btn btn-danger">Youtube</a>
             </div>`
             document.getElementById("row").innerHTML=cartona
+}
+
+
+
+export function displayCategories(categories){
+    let cartona=``
+    categories.forEach(category=>{
+        cartona+=`
+        <div class="col-lg-3 col-md-4">
+                    <div class="item rounded-2 overflow-hidden position-relative" id="">
+                        <img src="${category.strCategoryThumb}" class="w-100" >
+                        <div class="img-layer position-absolute flex-column text-center">
+                            <h3>${category.strCategory}</h3>
+                            <p>${category.strCategoryDescription.split(" ").slice(0,20).join(" ")}</p>
+                        </div>
+                    </div>
+                </div>`
+    })
+    document.getElementById("row").innerHTML=cartona
 }
