@@ -1,5 +1,6 @@
 import { displayMeals } from "./ui.js"
 import { MealDetails} from "./details.js"
+import { Categories } from "./categories.js"
 
 let navIcon=document.getElementById("nav-icon")
 let items=[]
@@ -88,6 +89,6 @@ async function getDefaultMeals(){
 
 getDefaultMeals()
 
-
-
-
+document.getElementById("link2").addEventListener('click',function(){
+    let categories=new Categories()
+})

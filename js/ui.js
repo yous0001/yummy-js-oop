@@ -7,7 +7,7 @@ export function displayMeals(meals){
                 <div class="item rounded-2 overflow-hidden position-relative" id="${meal.idMeal}">
                     <img src="${meal.strMealThumb}" class="w-100" >
                     <div class="img-layer position-absolute">
-                        <p>${meal.strIngredient1}</p>
+                        <p>${meal.strMeal}</p>
                     </div>
                 </div>
             </div>
@@ -17,7 +17,6 @@ export function displayMeals(meals){
 }
 
 export function displayMealDetials(meal){
-    let box=``
     let Ingredient=[]
     let measure=[]
     let counter=0
