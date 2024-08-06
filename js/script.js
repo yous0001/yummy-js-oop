@@ -65,3 +65,12 @@ function closeNav(){
         })
     
 }
+
+async function getDefaultMeals(){
+    const URL=`https://www.themealdb.com/api/json/v1/1/search.php?s=`
+    let responce=await fetch(URL)
+    responce=await responce.json()
+    return responce
+    
+}
+let meals=getDefaultMeals()
