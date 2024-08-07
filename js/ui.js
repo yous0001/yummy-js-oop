@@ -112,3 +112,18 @@ export function displayArea(areas){
         })
         document.getElementById("row").innerHTML=cartona
 }
+
+export function displayIngredients(ingredients){
+    let cartona=``
+    ingredients.forEach(ingredient=>{
+        cartona+=`
+        <div class="col-lg-3 col-md-4 text-white">
+                <div class="ingredient rounded-2 text-center cursor-pointer" id="${(ingredient.strIngredient).replace(" ","_")}">
+                        <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                        <h3>${ingredient.strIngredient}</h3>
+                        <p>${(ingredient.strDescription?.split(" ").slice(0,20).join(" "))}</p>
+                </div>
+        </div>`
+        })
+        document.getElementById("row").innerHTML=cartona
+}

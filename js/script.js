@@ -2,6 +2,7 @@ import { displayMeals } from "./ui.js"
 import { MealDetails} from "./details.js"
 import { Categories } from "./categories.js"
 import { Areas } from "./area.js"
+import { Ingredients } from "./Ingredients.js"
 
 let navIcon=document.getElementById("nav-icon")
 let items=[]
@@ -96,4 +97,8 @@ document.getElementById("link2").addEventListener('click',function(){
 
 document.getElementById("link3").addEventListener('click',function(){
     let areas=new Areas()
+})
+
+document.getElementById("link4").addEventListener('click',function(){
+    let ingredients=new Ingredients()
 })
