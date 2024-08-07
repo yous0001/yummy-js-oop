@@ -3,7 +3,7 @@ import { MealDetails} from "./details.js"
 import { Categories } from "./categories.js"
 import { Areas } from "./area.js"
 import { Ingredients } from "./Ingredients.js"
-import { serachName } from "./serach.js"
+import { searchLetter, serachName } from "./serach.js"
 
 let navIcon=document.getElementById("nav-icon")
 let items=[]
@@ -99,6 +99,10 @@ document.getElementById("link1").addEventListener('click',function(){
 
 document.getElementById("search-name").addEventListener('keyup',function(){
     serachName(document.getElementById("search-name").value)
+})
+
+document.getElementById("search-letter").addEventListener('keyup',function(){
+    searchLetter(document.getElementById("search-letter").value)
 })
 
 document.getElementById("link2").addEventListener('click',function(){
