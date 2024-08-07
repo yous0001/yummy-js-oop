@@ -102,3 +102,8 @@ document.getElementById("link3").addEventListener('click',function(){
 document.getElementById("link4").addEventListener('click',function(){
     let ingredients=new Ingredients()
 })
+
+document.getElementById("link1").addEventListener('click',function(){
+    document.getElementById("serach-container").classList.replace("d-none","d-block")
+    document.getElementById("row").innerHTML=""
+})

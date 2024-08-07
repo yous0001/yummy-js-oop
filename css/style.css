@@ -18,3 +18,7 @@
 .category:hover .img-layer{
     top: 0;
 }
+
+.container .row input::placeholder{
+    color: gray;
+}
