@@ -98,3 +98,17 @@ export function displayCategories(categories){
     })
     document.getElementById("row").innerHTML=cartona
 }
+
+export function displayArea(areas){
+    let cartona=``
+    areas.forEach(area=>{
+        cartona+=`
+        <div class="col-lg-3 col-md-4 text-white">
+                <div class="area rounded-2 text-center cursor-pointer">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>${area.strArea}</h3>
+                </div>
+        </div>`
+        })
+        document.getElementById("row").innerHTML=cartona
+}
