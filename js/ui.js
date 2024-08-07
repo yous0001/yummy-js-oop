@@ -86,7 +86,7 @@ export function displayCategories(categories){
     categories.forEach(category=>{
         cartona+=`
         <div class="col-lg-3 col-md-4">
-                    <div class="item rounded-2 overflow-hidden position-relative" id="">
+                    <div class="category rounded-2 overflow-hidden position-relative" id="${category.strCategory}">
                         <img src="${category.strCategoryThumb}" class="w-100" >
                         <div class="img-layer position-absolute flex-column text-center">
                             <h3>${category.strCategory}</h3>
