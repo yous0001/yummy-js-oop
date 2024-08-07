@@ -1,4 +1,5 @@
-import { displayCategories } from "./ui.js"
+import { MealDetails } from "./details.js"
+import { displayCategories, displayMeals } from "./ui.js"
 
 export class Categories{
     constructor(){
@@ -20,7 +21,15 @@ export class Categories{
         const URL=`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
         let responce=await fetch(URL)
         responce=await responce.json()
-        console.log(responce);
+        displayMeals(responce.meals)
+
+        let items=Array.from(document.getElementsByClassName("item"))
+        items.forEach(async item=>{
+            item.addEventListener('click',async function(){
+                let mealdetails=new MealDetails(item.id)
+            
+        })
+    })
         
     }
 }

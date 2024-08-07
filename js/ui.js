@@ -14,6 +14,7 @@ export function displayMeals(meals){
         `        
     });
     document.getElementById("row").innerHTML=cartona
+    
 }
 
 
