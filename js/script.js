@@ -3,6 +3,7 @@ import { MealDetails} from "./details.js"
 import { Categories } from "./categories.js"
 import { Areas } from "./area.js"
 import { Ingredients } from "./Ingredients.js"
+import { serachName } from "./serach.js"
 
 let navIcon=document.getElementById("nav-icon")
 let items=[]
@@ -91,19 +92,28 @@ async function getDefaultMeals(){
 
 getDefaultMeals()
 
-document.getElementById("link2").addEventListener('click',function(){
-    let categories=new Categories()
-})
-
-document.getElementById("link3").addEventListener('click',function(){
-    let areas=new Areas()
-})
-
-document.getElementById("link4").addEventListener('click',function(){
-    let ingredients=new Ingredients()
-})
-
 document.getElementById("link1").addEventListener('click',function(){
     document.getElementById("serach-container").classList.replace("d-none","d-block")
     document.getElementById("row").innerHTML=""
 })
+
+document.getElementById("search-name").addEventListener('keyup',function(){
+    serachName(document.getElementById("search-name").value)
+})
+
+document.getElementById("link2").addEventListener('click',function(){
+    document.getElementById("serach-container").classList.replace("d-block","d-none")
+    let categories=new Categories()
+})
+
+document.getElementById("link3").addEventListener('click',function(){
+    document.getElementById("serach-container").classList.replace("d-block","d-none")
+    let areas=new Areas()
+})
+
+document.getElementById("link4").addEventListener('click',function(){
+    document.getElementById("serach-container").classList.replace("d-block","d-none")
+    let ingredients=new Ingredients()
+})
+
+

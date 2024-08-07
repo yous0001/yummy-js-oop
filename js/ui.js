@@ -1,5 +1,6 @@
 
 export function displayMeals(meals){
+    
     let cartona=``;
     meals.forEach(meal => {
         cartona+=`
@@ -14,7 +15,7 @@ export function displayMeals(meals){
         `        
     });
     document.getElementById("row").innerHTML=cartona
-    
+
 }
 
 
