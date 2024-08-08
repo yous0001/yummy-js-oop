@@ -4,10 +4,17 @@ import { Categories } from "./categories.js"
 import { Areas } from "./area.js"
 import { Ingredients } from "./Ingredients.js"
 import { searchLetter, serachName } from "./serach.js"
+import { ageValidation, emailValidation, nameValidation, passwordValidation, phoneValidation, repasswordValidation, validation } from "./validation.js"
 
 let navIcon=document.getElementById("nav-icon")
 let items=[]
 let isNavOpen=false
+let nameField=document.getElementById("name")
+let emailField=document.getElementById("email")
+let phoneField=document.getElementById("phone")
+let ageField=document.getElementById("age")
+let passwordField=document.getElementById("password")
+let repasswordField=document.getElementById("repassword")
 
 navIcon.addEventListener('click',function(){
     if(isNavOpen===true){
@@ -96,6 +103,7 @@ document.getElementById("link1").addEventListener('click',function(){
     document.getElementById("serach-container").classList.replace("d-none","d-block")
     document.getElementById("contact-container").classList.replace("d-block","d-none")
     document.getElementById("row").innerHTML=""
+    closeNav()
 })
 
 document.getElementById("search-name").addEventListener('keyup',function(){
@@ -110,24 +118,37 @@ document.getElementById("link2").addEventListener('click',function(){
     document.getElementById("serach-container").classList.replace("d-block","d-none")
     document.getElementById("contact-container").classList.replace("d-block","d-none")
     let categories=new Categories()
+    closeNav()
 })
 
 document.getElementById("link3").addEventListener('click',function(){
     document.getElementById("serach-container").classList.replace("d-block","d-none")
     document.getElementById("contact-container").classList.replace("d-block","d-none")
     let areas=new Areas()
+    closeNav()
 })
 
 document.getElementById("link4").addEventListener('click',function(){
     document.getElementById("serach-container").classList.replace("d-block","d-none")
     document.getElementById("contact-container").classList.replace("d-block","d-none")
     let ingredients=new Ingredients()
+    closeNav()
 })
 
 document.getElementById("link5").addEventListener('click',function(){
     document.getElementById("serach-container").classList.replace("d-block","d-none")
     document.getElementById("contact-container").classList.replace("d-none","d-block")
     document.getElementById("row").innerHTML=""
+    closeNav()
 })
+
+
+
+nameField.addEventListener('keyup',()=>{nameValidation();validation();})
+emailField.addEventListener('keyup',()=>{emailValidation();validation();})
+phoneField.addEventListener('keyup',()=>{phoneValidation();validation();})
+ageField.addEventListener('keyup',()=>{ageValidation();validation();})
+passwordField.addEventListener('keyup',()=>{passwordValidation();validation();})
+repasswordField.addEventListener('keyup',()=>{repasswordValidation();validation();})
 
 
