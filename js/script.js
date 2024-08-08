@@ -94,6 +94,7 @@ getDefaultMeals()
 
 document.getElementById("link1").addEventListener('click',function(){
     document.getElementById("serach-container").classList.replace("d-none","d-block")
+    document.getElementById("contact-container").classList.replace("d-block","d-none")
     document.getElementById("row").innerHTML=""
 })
 
@@ -107,17 +108,26 @@ document.getElementById("search-letter").addEventListener('keyup',function(){
 
 document.getElementById("link2").addEventListener('click',function(){
     document.getElementById("serach-container").classList.replace("d-block","d-none")
+    document.getElementById("contact-container").classList.replace("d-block","d-none")
     let categories=new Categories()
 })
 
 document.getElementById("link3").addEventListener('click',function(){
     document.getElementById("serach-container").classList.replace("d-block","d-none")
+    document.getElementById("contact-container").classList.replace("d-block","d-none")
     let areas=new Areas()
 })
 
 document.getElementById("link4").addEventListener('click',function(){
     document.getElementById("serach-container").classList.replace("d-block","d-none")
+    document.getElementById("contact-container").classList.replace("d-block","d-none")
     let ingredients=new Ingredients()
+})
+
+document.getElementById("link5").addEventListener('click',function(){
+    document.getElementById("serach-container").classList.replace("d-block","d-none")
+    document.getElementById("contact-container").classList.replace("d-none","d-block")
+    document.getElementById("row").innerHTML=""
 })
 
 

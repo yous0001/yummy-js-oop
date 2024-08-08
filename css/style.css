@@ -19,6 +19,10 @@
     top: 0;
 }
 
-.container .row input::placeholder{
+#serach-container .row input::placeholder{
     color: gray;
+}
+
+#contact-container .row input{
+    background-color: white !important;
 }
