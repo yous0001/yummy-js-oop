@@ -20,6 +20,7 @@ export function displayMeals(meals){
 
 
 export function displayMealDetials(meal){
+    
     let Ingredient=[]
     let measure=[]
     let counter=0
