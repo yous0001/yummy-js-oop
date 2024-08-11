@@ -151,4 +151,6 @@ ageField.addEventListener('keyup',()=>{ageValidation();validation();})
 passwordField.addEventListener('keyup',()=>{passwordValidation();validation();})
 repasswordField.addEventListener('keyup',()=>{repasswordValidation();validation();})
 
-
+$(window).ready(()=>{
+    $("#loading").slideUp(1000)
+})
