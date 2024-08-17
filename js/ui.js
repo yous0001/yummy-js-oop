@@ -28,19 +28,26 @@ export function displayMealDetials(meal){
     let recipe=``
     let tagsHTMl=``
 
-    for (let [key, value] of mealMap) {
-        counter++
-        if(counter>=10&&counter<30){
-            if(value==="")
-                continue;
-            Ingredient.push(value)
-        }
-        if(counter>=30&&counter<50){
-            if(value===" ")
-                break;
-            measure.push(value)
+    for (let i = 1; i <= 20; i++) {
+        if (meal[`strIngredient${i}`]) {
+            measure.push(meal[`strMeasure${i}`])
+            Ingredient.push(meal[`strIngredient${i}`])
         }
     }
+
+    // for (let [key, value] of mealMap) {
+    //     counter++
+    //     if(counter>=10&&counter<30){
+    //         if(value==="")
+    //             continue;
+    //         Ingredient.push(value)
+    //     }
+    //     if(counter>=30&&counter<50){
+    //         if(value===" ")
+    //             break;
+    //         measure.push(value)
+    //     }
+    // }
     for(let i=0;i<Ingredient.length;i++){
         recipe+=`
         <li class="alert alert-info m-2 p-1">${measure[i]} ${Ingredient[i]}</li>`
