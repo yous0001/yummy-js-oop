@@ -62,7 +62,7 @@ export function displayMealDetials(meal){
             </div>
             <div class="col-md-8 text-white">
                 <h2>Instructions</h2>
-                <p>${meal.strInstructions}</p>
+                <p>${meal.strInstructions.split("STEP").join(`<br/><span class="fw-bold">STEP</span>`)}</p>
                 <h3><span class="fw-bolder">Area : </span>${meal.strArea}</h3>
                 <h3><span class="fw-bolder">Category : </span>${meal.strCategory}</h3>
                 <h3>Recipes :</h3>
